@@ -2,7 +2,7 @@
 #  Installs the base Apache package.
 #
 class apache_install::install {
-  package { "${install_name}":
-    ensure => $install_ensure,
+  package { "${apache_install::install_name}":
+    ensure => $apache_install::install_ensure,
   }
 }
