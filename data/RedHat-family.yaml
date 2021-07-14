@@ -1,3 +1,4 @@
 ---
 apache_install::install_name: 'httpd'
 apache_install::config_path: '/etc/httpd/conf/httpd.conf'
+apache_install::service_name: 'httpd'
