@@ -7,6 +7,12 @@
 class apache_install(
   String $install_name,
   String $install_ensure,
+  String $config_ensure,
+  String $config_path,
 ) {
-  include apache_install::install
+  contain apache_install::install
+  contain apache_install::config
+
+  Class['::apache_install::install']
+  -> Class['::apache_install::config']
 }
